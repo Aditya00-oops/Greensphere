@@ -62,7 +62,8 @@ export default function LeafletMapContainer({ ghostMode = false, isDarkMode = fa
 
   useEffect(() => {
     // Load static hotspots from backend
-    fetch("http://localhost:8000/api/hotspots")
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+    fetch(`${API_URL}/api/hotspots`)
       .then((res) => res.json())
       .then((data) => {
         if (data.features) {

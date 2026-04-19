@@ -41,7 +41,8 @@ export default function MapContainerV3({ isDarkMode }: { isDarkMode: boolean }) 
   const fetchHotspots = async () => {
     let data;
     try {
-      const res = await fetch('http://localhost:8000/api/hotspots');
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+      const res = await fetch(`${API_URL}/api/hotspots`);
       if (!res.ok) throw new Error("Backend not running");
       data = await res.json();
     } catch (err) {
