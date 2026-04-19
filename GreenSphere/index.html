@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenSphere - AI Waste Intelligence</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+  <!-- Mapbox token: Replace 'YOUR_MAPBOX_TOKEN' with your token from mapbox.com -->
+</head>
+<body>
+  <!-- Top Bar: Green Credits -->
+  <div id="topbar">
+    <div class="logo">🌱 GreenSphere</div>
+    <div id="credits">Green Credits: 0</div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Map -->
+    <div id="map"></div>
+
+    <!-- Sidebar: Analytics & Controls -->
+    <div id="sidebar">
+      <h3>Analytics</h3>
+      <div id="analytics">
+        <p>Total Hotspots: <span id="total-hotspots">0</span></p>
+        <p>Collected: <span id="collected">0</span></p>
+        <p>CO₂ Saved: <span id="co2-saved">0</span> tons</p>
+        <p>Efficiency: <span id="efficiency">0</span>%</p>
+      </div>
+      <button id="scan-btn">🔍 AI Scan</button>
+      <button id="route-btn">🚛 Generate Route</button>
+      <button id="collect-btn">✅ Mark Collected</button>
+    </div>
+  </div>
+
+  <!-- Report Modal -->
+  <div id="report-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Report Garbage</h3>
+      <p>Location: <span id="report-lat"></span>, <span id="report-lng"></span></p>
+      <input type="file" id="image-upload" accept="image/*">
+      <button id="submit-report">Submit & AI Classify</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

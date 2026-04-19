@@ -1,0 +1,83 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.7082, 26.9855] },
+      "properties": {
+        "name": "Sewapura Landfill",
+        "severity": 9,
+        "source": "satellite",
+        "type": "mixed_waste",
+        "status": "critical",
+        "label": "Sewapura Landfill (critical mixed_waste)",
+        "color": "red"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.8215, 26.8421] },
+      "properties": {
+        "name": "Mathuradaspura Dump Yard",
+        "severity": 8,
+        "source": "satellite",
+        "type": "mixed_waste",
+        "status": "critical",
+        "label": "Mathuradaspura Dump Yard (critical mixed_waste)",
+        "color": "red"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.7870, 26.9150] },
+      "properties": {
+        "name": "Chandpole Bazaar Waste Spot",
+        "severity": 6,
+        "source": "user",
+        "type": "plastic",
+        "status": "pending",
+        "label": "Chandpole Bazaar Waste Spot (pending plastic)",
+        "color": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.8250, 26.9000] },
+      "properties": {
+        "name": "Malviya Nagar Garbage Area",
+        "severity": 5,
+        "source": "user",
+        "type": "organic",
+        "status": "pending",
+        "label": "Malviya Nagar Garbage Area (pending organic)",
+        "color": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.7700, 26.9500] },
+      "properties": {
+        "name": "Vaishali Nagar Dump Spot",
+        "severity": 7,
+        "source": "ai",
+        "type": "construction_waste",
+        "status": "pending",
+        "label": "Vaishali Nagar Dump Spot (pending construction_waste)",
+        "color": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.8000, 26.8700] },
+      "properties": {
+        "name": "Tonk Road Waste Cluster",
+        "severity": 6,
+        "source": "ai",
+        "type": "mixed_waste",
+        "status": "pending",
+        "label": "Tonk Road Waste Cluster (pending mixed_waste)",
+        "color": "orange"
+      }
+    }
+  ]
+}

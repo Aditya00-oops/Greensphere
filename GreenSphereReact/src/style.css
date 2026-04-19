@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(0, 200, 100, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+  color: white;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+#credits {
+  font-size: 1.1rem;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+  position: relative;
+}
+
+.leaflet-container {
+  height: 100vh;
+  min-height: 100%;
+}
+
+#sidebar {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 500;
+}
+
+#sidebar h3 {
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+#analytics p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+#analytics span {
+  font-weight: bold;
+  color: #28a745;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#scan-btn {
+  background: #007bff;
+  color: white;
+}
+
+#route-btn {
+  background: #6f42c1;
+  color: white;
+}
+
+#collect-btn {
+  background: #28a745;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+.modal-content h3 {
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+#image-upload {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+}
+
+#submit-report {
+  background: #28a745;
+  color: white;
+  font-size: 1.1rem;
+}
+
+#toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transform: translateX(400px);
+  transition: transform 0.3s;
+  z-index: 3000;
+}
+
+#toast.show {
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    height: 40vh;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  .container {
+    position: relative;
+  }
+}

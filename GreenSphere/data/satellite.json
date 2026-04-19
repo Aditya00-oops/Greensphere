@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "coords": [75.851, 26.985],
+    "type": "mixed waste",
+    "severity": 9,
+    "source": "satellite",
+    "label": "AI Detected Landfill (Satellite)",
+    "color": "red"
+  },
+  {
+    "id": 2,
+    "coords": [75.739, 26.927],
+    "type": "mixed waste",
+    "severity": 8,
+    "source": "satellite",
+    "label": "AI Detected Landfill (Satellite)",
+    "color": "red"
+  }
+]

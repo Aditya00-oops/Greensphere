@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "coords": [75.787, 26.912],
+    "type": "plastic",
+    "severity": 5,
+    "source": "user",
+    "label": "User Report",
+    "color": "orange"
+  },
+  {
+    "id": 2,
+    "coords": [75.800, 26.900],
+    "type": "organic",
+    "severity": 4,
+    "source": "user",
+    "label": "User Report",
+    "color": "orange"
+  },
+  {
+    "id": 3,
+    "coords": [75.780, 26.920],
+    "type": "mixed",
+    "severity": 6,
+    "source": "user",
+    "label": "User Report",
+    "color": "orange"
+  },
+  {
+    "id": 4,
+    "coords": [75.790, 26.905],
+    "type": "plastic",
+    "severity": 5,
+    "source": "user",
+    "label": "User Report",
+    "color": "orange"
+  },
+  {
+    "id": 5,
+    "coords": [75.770, 26.930],
+    "type": "organic",
+    "severity": 4,
+    "source": "user",
+    "label": "User Report",
+    "color": "orange"
+  }
+]
