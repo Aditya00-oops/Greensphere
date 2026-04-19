@@ -4,7 +4,9 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Wind, Coins, Satellite, Camera, CheckCircle2, Truck, BarChart3, Recycle, ShieldCheck, FileWarning, Upload, AlertTriangle, Sun, Moon } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import LeafletMapContainer from '@/components/LeafletMapContainer';
+import dynamic from 'next/dynamic';
+const LeafletMapContainer = dynamic(() => import('@/components/LeafletMapContainer'), { ssr: false });
+
 import AIScanner from '@/components/AIScanner';
 import { X } from 'lucide-react';
 

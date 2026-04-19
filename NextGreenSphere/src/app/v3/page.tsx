@@ -4,7 +4,9 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Moon, Sun, Camera, CheckCircle2, TrendingUp, BarChart3, CloudRain, UploadCloud, X } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import MapContainerV3 from '@/components/MapContainerV3';
+import dynamic from 'next/dynamic';
+const MapContainerV3 = dynamic(() => import('@/components/MapContainerV3'), { ssr: false });
+
 
 export default function GreenSphereV3() {
   const [isDarkMode, setIsDarkMode] = useState(false);
