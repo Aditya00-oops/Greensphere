@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Moon, Sun, Camera, CheckCircle2, TrendingUp, BarChart3, CloudRain, UploadCloud, X } from 'lucide-react';
-import confetti from 'canvas-confetti';
+
 import dynamic from 'next/dynamic';
 const MapContainerV3 = dynamic(() => import('@/components/MapContainerV3'), { ssr: false });
 
@@ -19,7 +19,8 @@ export default function GreenSphereV3() {
     else document.documentElement.classList.remove('dark');
   }, [isDarkMode]);
 
-  const triggerConfetti = () => {
+  const triggerConfetti = async () => {
+    const confetti = (await import('canvas-confetti')).default;
     confetti({ particleCount: 150, spread: 80, origin: { y: 0.5 }, colors: ['#10B981', '#34D399', '#A7F3D0'] });
   };
 

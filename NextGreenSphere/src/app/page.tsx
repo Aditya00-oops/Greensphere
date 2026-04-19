@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Wind, Coins, Satellite, Camera, CheckCircle2, Truck, BarChart3, Recycle, ShieldCheck, FileWarning, Upload, AlertTriangle, Sun, Moon } from 'lucide-react';
-import confetti from 'canvas-confetti';
+
 import dynamic from 'next/dynamic';
 const LeafletMapContainer = dynamic(() => import('@/components/LeafletMapContainer'), { ssr: false });
 
@@ -55,7 +55,8 @@ export default function B2BDashboard() {
     { icon: <Truck className="text-textSecondary" size={18} />, text: "Active Trucks: 12" },
   ];
 
-  const triggerConfetti = () => {
+  const triggerConfetti = async () => {
+    const confetti = (await import('canvas-confetti')).default;
     const end = Date.now() + 2 * 1000;
     const colors = ['#10B981', '#A7F3D0', '#FCD34D'];
     (function frame() {
